@@ -11,12 +11,12 @@ public:
 	~Vector2() = default;
 
 	
-	Vector2 Suma(Vector2 v);
-	Vector2 Restar(Vector2 v);
-	Vector2 Multiplicacion(Vector2 v);
-	Vector2 Division(Vector2 v);
-	float pointProduct(Vector2 v);
-	float crossProduct(Vector2 v);
+	Vector2 Suma(Vector2 segundoVector);
+	Vector2 Restar(Vector2 segundoVector);
+	Vector2 Multiplicacion(Vector2 segundoVector);
+	Vector2 Division(Vector2 segundoVector);
+	float pointProduct(Vector2 segundoVector);
+	float crossProduct(Vector2 segundoVector);
 	double magnitud();
 	Vector2 normalizar();
 	void print();

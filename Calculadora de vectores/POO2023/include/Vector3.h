@@ -10,12 +10,12 @@ public:
 	//Destructor
 	~Vector3() = default;
 
-	Vector3 Suma(Vector3 v);
-	Vector3 Resta(Vector3 v);
-	Vector3 Multi(Vector3 v);
-	Vector3 Division(Vector3 v);
-	float pointProduct(Vector3 v);
-	float crossProduct(Vector3 v);
+	Vector3 Suma(Vector3 segundoVector);
+	Vector3 Resta(Vector3 segundoVector);
+	Vector3 Multi(Vector3 segundoVector);
+	Vector3 Division(Vector3 segundoVector);
+	float pointProduct(Vector3 segundoVector);
+	float crossProduct(Vector3 segundoVector);
 	double magnitud();
 	Vector3 normalizar();
 	void print();

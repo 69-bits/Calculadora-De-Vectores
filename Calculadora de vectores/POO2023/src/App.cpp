@@ -26,6 +26,9 @@ void App::menuSelector()
     case 4:
         cout << "Bye..." << endl;
         break;
+    default:
+        cout << "No fue una opcion valida" << endl;
+        break;
 
     }
 }
@@ -422,6 +425,7 @@ void App::menuVector4()
 
             Vector4 resultadoNormalizar = punto1.normalizar();
             resultadoNormalizar.print();
+            break;
 
         case 8:
             menuSelector();

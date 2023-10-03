@@ -10,11 +10,11 @@ public:
 	//Destructor
 	~Vector4() = default;
 
-	Vector4 Suma(Vector4 v);
-	Vector4 Resta(Vector4 v);
-	Vector4 Multi(Vector4 v);
-	Vector4 Division(Vector4 v);
-	float pointProduct(Vector4 v);
+	Vector4 Suma(Vector4 segundoVector);
+	Vector4 Resta(Vector4 segundoVector);
+	Vector4 Multi(Vector4 segundoVector);
+	Vector4 Division(Vector4 segundoVector);
+	float pointProduct(Vector4 segundoVector);
 	double magnitud();
 	Vector4 normalizar();
 	void print();
