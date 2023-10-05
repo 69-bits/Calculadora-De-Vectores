@@ -1,13 +1,8 @@
-#include "Vector2.h"
 #include "App.h"
 #include "Common.h"
 
-int opcion;
-
 int main()
 {
-	App app;
-	app.menuSelector();
-	
-	
+	App app; // Create an instance of the App class.
+	app.menuSelector(); // Call the 'menuSelector' method to start the application.
 }

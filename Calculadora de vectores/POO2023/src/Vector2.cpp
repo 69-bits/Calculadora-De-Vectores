@@ -1,59 +1,68 @@
 #include "Vector2.h"
 
+// Constructor: Initializes a 2D vector with the given x and y components.
 Vector2::Vector2(float x, float y)
 {
 	x_ = x;
 	y_ = y;
 }
 
-Vector2 Vector2::Suma(Vector2 segundoVector)
+// Performs vector addition and returns the result as a new Vector2.
+Vector2 Vector2::Suma(Vector2 _vec)
 {
 	Vector2 resultado;
-    resultado.x_ = x_ + segundoVector.x_;
-    resultado.y_ = y_ + segundoVector.y_;
+    resultado.x_ = x_ + _vec.x_;
+    resultado.y_ = y_ + _vec.y_;
     return resultado;
 }
 
-Vector2 Vector2::Restar(Vector2 segundoVector)
+// Performs vector subtraction and returns the result as a new Vector2.
+Vector2 Vector2::Restar(Vector2 _vec)
 {
     Vector2 resultado;
-    resultado.x_ = x_ - segundoVector.x_;
-    resultado.y_ = y_ - segundoVector.y_;
+    resultado.x_ = x_ - _vec.x_;
+    resultado.y_ = y_ - _vec.y_;
     return resultado;
 }
 
-Vector2 Vector2::Multiplicacion(Vector2 segundoVector)
+// Performs element-wise vector multiplication and returns the result as a new Vector2.
+Vector2 Vector2::Multiplicacion(Vector2 _vec)
 {
     Vector2 resultado;
-    resultado.x_ = x_ * segundoVector.x_;
-    resultado.y_ = y_ * segundoVector.y_;
+    resultado.x_ = x_ * _vec.x_;
+    resultado.y_ = y_ * _vec.y_;
     return resultado;
 }
 
-Vector2 Vector2::Division(Vector2 segundoVector)
+// Performs element-wise vector division and returns the result as a new Vector2.
+Vector2 Vector2::Division(Vector2 _vec)
 {
     Vector2 resultado;
-    resultado.x_ = x_ / segundoVector.x_;
-    resultado.y_ = y_ / segundoVector.y_;
+    resultado.x_ = x_ / _vec.x_;
+    resultado.y_ = y_ / _vec.y_;
     return resultado;
 }
 
-float Vector2::pointProduct(Vector2 segundoVector)
+// Calculates the dot product between two vectors and returns a scalar value.
+float Vector2::pointProduct(Vector2 _vec)
 {
-    return ((x_ * segundoVector.x_) + (y_ * segundoVector.y_));
+    return ((x_ * _vec.x_) + (y_ * _vec.y_));
 }
 
-float Vector2::crossProduct(Vector2 segundoVector)
+// Calculates the cross product and returns a scalar value.
+float Vector2::crossProduct(Vector2 _vec)
 {
-    return ((x_ * segundoVector.y_) - (y_ * segundoVector.x_));
+    return ((x_ * _vec.y_) - (y_ * _vec.x_));
 }
 
+// Calculates the magnitude (length) of the vector and returns a double.
 double Vector2::magnitud()
 {
-    double resultadoFinal = sqrt(pow(x_, 2) + pow(y_, 2));
-    return resultadoFinal;
+    
+    return sqrt(pow(x_, 2) + pow(y_, 2));
 }
 
+// Normalizes the vector and returns a new normalized Vector2.
 Vector2 Vector2::normalizar()
 {
     Vector2 resultado;
@@ -62,7 +71,7 @@ Vector2 Vector2::normalizar()
     resultado.y_ = y_ / dterminante;
     return resultado;
 }
-
+// Prints the components of the vector to the console.
 void Vector2::print()
 {
     cout << " Vector: " << x_ << ", " << y_ << endl;

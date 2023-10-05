@@ -1,5 +1,6 @@
 #include "Vector4.h"
 
+// Constructor: Initializes a 4D vector with the given x, y, z, and a components.
 Vector4::Vector4(float x, float y, float z, float a)
 {
 	x_ = x;
@@ -8,57 +9,64 @@ Vector4::Vector4(float x, float y, float z, float a)
 	a_ = a;
 }
 
-Vector4 Vector4::Suma(Vector4 segundoVector)
+// Performs vector addition and returns the result as a new Vector4.
+Vector4 Vector4::Suma(Vector4 _vec)
 {
 	Vector4 resultado;
-	resultado.x_ = x_ + segundoVector.x_;
-	resultado.y_ = y_ + segundoVector.y_;
-	resultado.z_ = z_ + segundoVector.z_;
-	resultado.a_ = a_ + segundoVector.a_;
+	resultado.x_ = x_ + _vec.x_;
+	resultado.y_ = y_ + _vec.y_;
+	resultado.z_ = z_ + _vec.z_;
+	resultado.a_ = a_ + _vec.a_;
 	return resultado;
 }
 
-Vector4 Vector4::Resta(Vector4 segundoVector)
+// Performs vector subtraction and returns the result as a new Vector4.
+Vector4 Vector4::Resta(Vector4 _vec)
 {
 	Vector4 resultado;
-	resultado.x_ = x_ - segundoVector.x_;
-	resultado.y_ = y_ - segundoVector.y_;
-	resultado.z_ = z_ - segundoVector.z_;
-	resultado.a_ = a_ - segundoVector.a_;
+	resultado.x_ = x_ - _vec.x_;
+	resultado.y_ = y_ - _vec.y_;
+	resultado.z_ = z_ - _vec.z_;
+	resultado.a_ = a_ - _vec.a_;
 	return resultado;
 }
 
-Vector4 Vector4::Multi(Vector4 segundoVector)
+// Performs element-wise vector multiplication and returns the result as a new Vector4.
+Vector4 Vector4::Multi(Vector4 _vec)
 {
 	Vector4 resultado;
-	resultado.x_ = x_ * segundoVector.x_;
-	resultado.y_ = y_ * segundoVector.y_;
-	resultado.z_ = z_ * segundoVector.z_;
-	resultado.a_ = a_ * segundoVector.a_;
+	resultado.x_ = x_ * _vec.x_;
+	resultado.y_ = y_ * _vec.y_;
+	resultado.z_ = z_ * _vec.z_;
+	resultado.a_ = a_ * _vec.a_;
 	return resultado;
 }
 
-Vector4 Vector4::Division(Vector4 segundoVector)
+// Performs element-wise vector division and returns the result as a new Vector4.
+Vector4 Vector4::Division(Vector4 _vec)
 {
 	Vector4 resultado;
-	resultado.x_ = x_ / segundoVector.x_;
-	resultado.y_ = y_ / segundoVector.y_;
-	resultado.z_ = z_ / segundoVector.z_;
-	resultado.a_ = a_ / segundoVector.a_;
+	resultado.x_ = x_ / _vec.x_;
+	resultado.y_ = y_ / _vec.y_;
+	resultado.z_ = z_ / _vec.z_;
+	resultado.a_ = a_ / _vec.a_;
 	return resultado;
 }
 
-float Vector4::pointProduct(Vector4 segundoVector)
+// Calculates the dot product between two vectors and returns a scalar value.
+float Vector4::pointProduct(Vector4 _vec)
 {
-	return ((x_ + segundoVector.x_) + (y_ + segundoVector.y_) + (z_ + segundoVector.z_) + (a_ + segundoVector.a_));
+	return ((x_ + _vec.x_) + (y_ + _vec.y_) + (z_ + _vec.z_) + (a_ + _vec.a_));
 }
 
+// Calculates the magnitude (length) of the vector and returns a double.
 double Vector4::magnitud()
 {
-	double resultadoFinal = sqrt(pow(x_, 2) + pow(y_, 2) + pow((z_), 2) + pow((a_), 2));
-	return resultadoFinal;
+	
+	return sqrt(pow(x_, 2) + pow(y_, 2) + pow((z_), 2) + pow((a_), 2));
 }
 
+// Normalizes the vector (sets its length to 1) and returns a new normalized Vector4.
 Vector4 Vector4::normalizar()
 {
 	Vector4 resultado;
@@ -70,11 +78,8 @@ Vector4 Vector4::normalizar()
 	return resultado;
 }
 
+// Prints the components of the vector to the console.
 void Vector4::print()
 {
 	cout << " Vector: " << x_ << ", " << y_ << ", " << z_ << ", " << a_ << endl;
 }
-
-
-
-

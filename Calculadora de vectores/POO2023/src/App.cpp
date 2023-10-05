@@ -1,43 +1,44 @@
 #include "App.h"
-#include "Vector2.h"
-#include "Vector3.h"
-#include "Vector4.h"
 
 void App::menuSelector()
 {
-    cout << "Ingrese con que va a querer empezar: " << endl;
-    cout << "1-Vectores2D" << endl;
-    cout << "2-Vectores3D" << endl;
-    cout << "3-Vectores4D" << endl;
-    cout << "4-salir" << endl;
-    cin >> opcionSelector;
-
-    switch (opcionSelector)
+    // Display menu options for selecting vector types.
+    
+    while (opcionSelector != 4)
     {
-    case 1:
-        menuVector2();
-        break;
-    case 2:
-        menuVector3();
-        break;
-    case 3:
-        menuVector4();
-        break;
-    case 4:
-        cout << "Bye..." << endl;
-        break;
-    default:
-        cout << "No fue una opcion valida" << endl;
-        break;
+        cout << "Ingrese con que va a querer empezar: " << endl;
+        cout << "1-Vectores2D" << endl;
+        cout << "2-Vectores3D" << endl;
+        cout << "3-Vectores4D" << endl;
+        cout << "4-salir" << endl;
+        cin >> opcionSelector;
 
+    
+        switch (opcionSelector)
+        {
+        case 1:
+            menuVector2(); // Call the menu for 2D vectors.
+            break;
+        case 2:
+            menuVector3(); // Call the menu for 3D vectors.
+            break;
+        case 3:
+            menuVector4(); // Call the menu for 4D vectors.
+            break;
+        case 4:
+            cout << "Bye..." << endl;
+            break;
+        default:
+            cout << "No fue una opcion valida" << endl;
+            break;
+        }
     }
 }
 
 void App::menuVector2()
 {
-    
-    while (opcion != 9)
-    {
+    // Display menu options for 2D vector operations.
+   
         cout << "--------------------------------------" << endl;
         cout << "Ingrese la opcion a realizar en la calculadora: " << endl;
         cout << endl;
@@ -60,6 +61,7 @@ void App::menuVector2()
         switch (opcion)
         {
         case 1:
+            // Prompt for input and perform vector addition.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
             punto1 = Vector2(x1, y1);
@@ -74,6 +76,7 @@ void App::menuVector2()
             break;
 
         case 2:
+            // Prompt for input and perform vector subtraction.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
 
@@ -89,6 +92,7 @@ void App::menuVector2()
             break;
 
         case 3:
+            // Prompt for input and perform vector multiplication.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
             punto1 = Vector2(x1, y1);
@@ -103,6 +107,7 @@ void App::menuVector2()
             break;
 
         case 4:
+            // Prompt for input and perform vector division.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
             punto1 = Vector2(x1, y1);
@@ -116,6 +121,7 @@ void App::menuVector2()
             break;
 
         case 5:
+            // Prompt for input and calculate dot product of vectors.
             float productoPunto;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
@@ -130,6 +136,7 @@ void App::menuVector2()
             break;
 
         case 6:
+            // Prompt for input and calculate cross product.
             float productoCruz;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
@@ -144,6 +151,7 @@ void App::menuVector2()
             break;
 
         case 7:
+            // Prompt for input and calculate magnitude of the vector.
             double productoMagnitud;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
@@ -154,6 +162,7 @@ void App::menuVector2()
             break;
 
         case 8:
+            // Prompt for input and normalize the vector.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1;
             punto1 = Vector2(x1, y1);
@@ -163,6 +172,7 @@ void App::menuVector2()
             break;
 
         case 9:
+            // Return to the main menu.
             menuSelector();
             break;
 
@@ -170,14 +180,13 @@ void App::menuVector2()
             cout << "No fue una opcion valida" << endl;
             break;
         }
-    }
+    
 }
 
 void App::menuVector3()
 {
    
-    while (opcion != 9)
-    {
+        // Display menu options for 3D vector operations.
         cout << "--------------------------------------" << endl;
         cout << "Ingrese la opcion a realizar en la calculadora: " << endl;
         cout << endl;
@@ -200,6 +209,7 @@ void App::menuVector3()
         switch (opcion)
         {
         case 1:
+            // Prompt for input and perform vector addition.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
             punto1 = Vector3(x1, y1, z1);
@@ -214,6 +224,7 @@ void App::menuVector3()
             break;
 
         case 2:
+            // Prompt for input and perform vector subtraction.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
 
@@ -229,6 +240,7 @@ void App::menuVector3()
             break;
 
         case 3:
+            // Prompt for input and perform vector multiplication.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
             punto1 = Vector3(x1, y1, z1);
@@ -243,6 +255,7 @@ void App::menuVector3()
             break;
 
         case 4:
+            // Prompt for input and perform vector division.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
             punto1 = Vector3(x1, y1, z1);
@@ -256,6 +269,7 @@ void App::menuVector3()
             break;
 
         case 5:
+            // Prompt for input and calculate dot product of vectors.
             float productoPunto;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
@@ -270,6 +284,7 @@ void App::menuVector3()
             break;
 
         case 6:
+            // Prompt for input and calculate cross product of vectors.
             float productoCruz;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
@@ -284,6 +299,7 @@ void App::menuVector3()
             break;
 
         case 7:
+            // Prompt for input and calculate magnitude of the vector.
             double productoMagnitud;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
@@ -294,6 +310,7 @@ void App::menuVector3()
             break;
 
         case 8:
+            // Prompt for input and normalize the vector.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1;
             punto1 = Vector3(x1, y1, z1);
@@ -303,6 +320,7 @@ void App::menuVector3()
             break;
 
         case 9:
+            // Return to the main menu.
             menuSelector();
             break;
 
@@ -310,14 +328,12 @@ void App::menuVector3()
             cout << "No fue una opcion valida" << endl;
             break;
         }
-    }
 }
 
 void App::menuVector4()
 {
     
-    while (opcion != 8)
-    {
+        // Display menu options for 4D vector operations.
         cout << "--------------------------------------" << endl;
         cout << "Ingrese la opcion a realizar en la calculadora: " << endl;
         cout << endl;
@@ -339,6 +355,7 @@ void App::menuVector4()
         switch (opcion)
         {
         case 1:
+            // Prompt for input and perform vector addition.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
             punto1 = Vector4(x1, y1, z1, a1);
@@ -353,6 +370,7 @@ void App::menuVector4()
             break;
 
         case 2:
+            // Prompt for input and perform vector subtraction.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
             punto1 = Vector4(x1, y1, z1, a1);
@@ -367,6 +385,7 @@ void App::menuVector4()
             break;
 
         case 3:
+            // Prompt for input and perform vector multiplication.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
             punto1 = Vector4(x1, y1, z1, a1);
@@ -381,6 +400,7 @@ void App::menuVector4()
             break;
 
         case 4:
+            // Prompt for input and perform vector division.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
             punto1 = Vector4(x1, y1, z1, a1);
@@ -394,6 +414,7 @@ void App::menuVector4()
             break;
 
         case 5:
+            // Prompt for input and calculate dot product of vectors.
             float productoPunto;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
@@ -408,6 +429,7 @@ void App::menuVector4()
             break;
 
         case 6:
+            // Prompt for input and calculate magnitude of the vector.
             double productoMagnitud;
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
@@ -419,6 +441,7 @@ void App::menuVector4()
             break;
 
         case 7:
+            // Prompt for input and normalize the vector.
             cout << "A continuacion, defina la dimension de su primer vector: " << endl;
             cin >> x1 >> y1 >> z1 >> a1;
             punto1 = Vector4(x1, y1, z1, a1);
@@ -428,6 +451,7 @@ void App::menuVector4()
             break;
 
         case 8:
+            // Return to the main menu.
             menuSelector();
 
             break;
@@ -436,5 +460,4 @@ void App::menuVector4()
             cout << "No fue una opcion valida" << endl;
             break;
         }
-    }
 }
