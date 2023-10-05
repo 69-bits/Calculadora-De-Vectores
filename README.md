@@ -1,2 +1,6 @@
 # Calculadora-De-Vectores
-EVALUACION: Generar las clases: Vector 2 Vector 3 Vector 4 App Los vectores se van a poder multiplicar, restar, sumar y dividir. Los vectores calcularan producto punto, cruz, magnitud, normalizacion.
+EVALUACION: 
+La calculadora tendra los siguientes vectores para calcular y cada uno tiene una descripcion de lo que hacen: 
+Vector 2D: multiplicar, restar, sumar y dividir. Tambien calcula producto punto, producto cruz, magnitud y normalizacion.
+Vector 3D: multiplicar, restar, sumar y dividir. Tambien calcula producto punto, producto cruz, magnitud y normalizacion.
+Vector 4D: multiplicar, restar, sumar y dividir. Tambien calcula producto punto, magnitud y normalizacion.
